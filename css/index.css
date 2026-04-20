@@ -1,0 +1,278 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #000000;
+  color: #ffffff;
+  line-height: 1.55;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #b197fc;
+}
+
+main {
+  flex: 1;
+}
+
+.entete {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #000000;
+  border-bottom: 1px solid #222222;
+}
+
+.largeur {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.entete .largeur {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+  gap: 1rem;
+}
+
+.marque {
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.25rem;
+  justify-content: flex-end;
+}
+
+.menu a {
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.menu a.actif {
+  color: #b197fc;
+}
+
+.pied {
+  margin-top: auto;
+  padding: 2rem 0;
+  background: #000000;
+  border-top: 1px solid #222222;
+}
+
+.pied .largeur {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #9a9a9a;
+}
+
+.pied nav {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.pied a {
+  color: #9a9a9a;
+}
+
+.pied a:hover {
+  color: #b197fc;
+}
+
+.fond-halo {
+  position: relative;
+  overflow: hidden;
+}
+
+.fond-halo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse 70% 55% at 70% 35%,
+    rgba(161, 136, 227, 0.22),
+    transparent 65%
+  );
+}
+
+.intro {
+  padding: 3rem 0 3.5rem;
+  text-align: center;
+}
+
+.intro .largeur {
+  position: relative;
+  z-index: 1;
+}
+
+.portrait {
+  width: 220px;
+  max-width: 70vw;
+  aspect-ratio: 1;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(177, 151, 252, 0.35);
+}
+
+.nom {
+  margin: 0 0 0.5rem;
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.violet {
+  color: #b197fc;
+}
+
+.metier {
+  margin: 0;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #c8c8c8;
+}
+
+.bloc {
+  padding: 2rem 0 3rem;
+}
+
+.bloc.serre {
+  padding-top: 0.5rem;
+}
+
+.carte {
+  background: #1a1a1a;
+  border-radius: 24px;
+  padding: 2rem;
+  border: 1px solid #2a2a2a;
+}
+
+.carte .surtitre {
+  margin: 0 0 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #b197fc;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.carte .texte {
+  margin: 0 0 1.5rem;
+  color: #c8c8c8;
+  font-size: 0.9rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1.75;
+}
+
+.centre {
+  text-align: center;
+}
+
+.bouton {
+  display: inline-block;
+  padding: 0.85rem 1.75rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: #b197fc;
+  color: #0a0a0a;
+}
+
+.bouton:hover {
+  filter: brightness(1.05);
+}
+
+.fin {
+  padding: 3.5rem 0 4rem;
+  text-align: center;
+  background: linear-gradient(180deg, #000000, #2e114d 45%, #000000);
+}
+
+.fin h2 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+@media (max-width: 600px) {
+  .largeur {
+    padding: 0 1.25rem;
+  }
+
+  .entete .largeur {
+    gap: 0.75rem;
+  }
+
+  .marque {
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+  }
+
+  .menu {
+    max-width: 72vw;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .menu ul {
+    gap: 0.85rem;
+  }
+
+  .menu a {
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+  }
+
+  .nom {
+    font-size: 1.65rem;
+  }
+
+  .fin h2 {
+    font-size: 1.35rem;
+  }
+}
