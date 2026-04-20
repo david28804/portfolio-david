@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — David Mbiya</title>
+    <link rel="stylesheet" href="css/contact.css" />
+  </head>
+  <body>
+    <header class="entete">
+      <div class="largeur">
+        <a class="marque" href="index.html">David mbiya</a>
+        <nav class="menu" aria-label="Navigation principale">
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="projet.html">Projets</a></li>
+            <li><a class="actif" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenu-principal">
+      <div class="largeur ligne-contact">
+        <aside class="coordonnees" aria-labelledby="titre-contact">
+          <h1 id="titre-contact">Contacter moi</h1>
+          <ul class="liste-contact">
+            <li>
+              <a href="mailto:mbiyadavid42@gmail.com">mbiyadavid42@gmail.com</a>
+            </li>
+            <li>
+              <a href="tel:+243841045972">+243 841 045 972</a>
+            </li>
+            <li>Kinshasa, RD Congo</li>
+          </ul>
+        </aside>
+
+        <section aria-labelledby="titre-formulaire">
+          <h2 id="titre-formulaire" class="cache">Formulaire de contact</h2>
+          <div class="carte">
+            <form action="#" method="post">
+              <fieldset class="aucun-style">
+                <legend class="cache">Vos coordonnées et message</legend>
+                <div class="champ">
+                  <span class="etiquette">Nom</span>
+                  <span class="ligne-deux">
+                    <span class="champ inline">
+                      <label class="cache" for="prenom">Prénom</label>
+                      <input
+                        id="prenom"
+                        name="prenom"
+                        type="text"
+                        autocomplete="given-name"
+                        placeholder="Prénom"
+                        required
+                      />
+                    </span>
+                    <span class="champ inline">
+                      <label class="cache" for="nom">Nom de famille</label>
+                      <input
+                        id="nom"
+                        name="nom"
+                        type="text"
+                        autocomplete="family-name"
+                        placeholder="Nom"
+                        required
+                      />
+                    </span>
+                  </span>
+                </div>
+                <p class="champ">
+                  <label for="email">Email</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    placeholder="Votre email"
+                    required
+                  />
+                </p>
+                <p class="champ">
+                  <label for="sujet">Sujet</label>
+                  <input id="sujet" name="sujet" type="text" required />
+                </p>
+                <p class="champ">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" required></textarea>
+                </p>
+                <div class="envoi">
+                  <button class="bouton" type="submit">
+                    Envoyer vos messages
+                  </button>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="pied">
+      <div class="largeur">
+        <p>© 2026 David Mbiya</p>
+        <nav aria-label="Réseaux sociaux">
+          <a href="https://www.linkedin.com" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com" rel="noopener noreferrer">GitHub</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
