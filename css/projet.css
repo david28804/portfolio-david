@@ -1,0 +1,279 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #000000;
+  color: #ffffff;
+  line-height: 1.55;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #b197fc;
+}
+
+main {
+  flex: 1;
+  background: linear-gradient(180deg, #000000, #2e114d 42%, #0a0a0a 78%, #000000);
+}
+
+.entete {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #000000;
+  border-bottom: 1px solid #222222;
+}
+
+.largeur {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.entete .largeur {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+  gap: 1rem;
+}
+
+.marque {
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.25rem;
+  justify-content: flex-end;
+}
+
+.menu a {
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.menu a.actif {
+  color: #b197fc;
+}
+
+.pied {
+  margin-top: auto;
+  padding: 2rem 0;
+  background: #000000;
+  border-top: 1px solid #222222;
+}
+
+.pied .largeur {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #9a9a9a;
+}
+
+.pied nav {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.pied a {
+  color: #9a9a9a;
+}
+
+.pied a:hover {
+  color: #b197fc;
+}
+
+.haut-projet {
+  padding: 2.5rem 0 1.5rem;
+}
+
+.grille {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.grille figure {
+  margin: 0;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid #333333;
+}
+
+.grille img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.carte {
+  background: #1a1a1a;
+  border-radius: 24px;
+  padding: 2rem;
+  border: 1px solid #2a2a2a;
+}
+
+.carte h2 {
+  margin: 0 0 1rem;
+  font-size: 1.35rem;
+}
+
+.carte .bouton {
+  margin-bottom: 1.25rem;
+}
+
+.carte .texte {
+  margin: 0;
+  color: #c8c8c8;
+  font-size: 0.95rem;
+}
+
+.bouton {
+  display: inline-block;
+  padding: 0.85rem 1.75rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: #b197fc;
+  color: #0a0a0a;
+}
+
+.bouton.grand {
+  padding: 1rem 2.25rem;
+  font-size: 0.8rem;
+}
+
+.bouton:hover {
+  filter: brightness(1.05);
+}
+
+.milieu {
+  padding: 2rem 0;
+}
+
+.encadre {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.encadre .texte {
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.07em;
+  line-height: 1.7;
+  color: #c8c8c8;
+}
+
+.appel {
+  padding: 2rem 0;
+}
+
+.appel .carte {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.appel h2 {
+  margin: 0 0 1rem;
+  font-size: 1.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.appel .texte {
+  margin: 0 0 1.5rem;
+  color: #c8c8c8;
+}
+
+.fin {
+  padding: 3rem 0 4rem;
+  text-align: center;
+}
+
+.fin h2 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 800;
+}
+
+.violet {
+  color: #b197fc;
+}
+
+@media (max-width: 900px) {
+  .grille {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .largeur {
+    padding: 0 1.25rem;
+  }
+
+  .entete .largeur {
+    gap: 0.75rem;
+  }
+
+  .marque {
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+  }
+
+  .menu {
+    max-width: 72vw;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .menu ul {
+    gap: 0.85rem;
+  }
+
+  .menu a {
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+  }
+
+  .fin h2 {
+    font-size: 1.35rem;
+  }
+}
