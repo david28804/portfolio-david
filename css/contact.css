@@ -1,0 +1,310 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #000000;
+  color: #ffffff;
+  line-height: 1.55;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #b197fc;
+}
+
+main {
+  flex: 1;
+  position: relative;
+}
+
+main::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10%;
+  height: 100px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(177, 151, 252, 0.35),
+    transparent
+  );
+  filter: blur(28px);
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.entete {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #000000;
+  border-bottom: 1px solid #222222;
+}
+
+.largeur {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.entete .largeur {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+  gap: 1rem;
+}
+
+.marque {
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.25rem;
+  justify-content: flex-end;
+}
+
+.menu a {
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.menu a.actif {
+  color: #b197fc;
+}
+
+.pied {
+  margin-top: auto;
+  padding: 2rem 0;
+  background: #000000;
+  border-top: 1px solid #222222;
+}
+
+.pied .largeur {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #9a9a9a;
+}
+
+.pied nav {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.pied a {
+  color: #9a9a9a;
+}
+
+.pied a:hover {
+  color: #b197fc;
+}
+
+.ligne-contact {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 2.5rem;
+  align-items: start;
+  padding: 3rem 0 3.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.coordonnees {
+  padding-top: 0.25rem;
+}
+
+.coordonnees h1 {
+  margin: 0 0 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #b197fc;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.liste-contact {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-size: 1rem;
+}
+
+.carte {
+  background: #1a1a1a;
+  border-radius: 24px;
+  padding: 2rem;
+  border: 1px solid #2a2a2a;
+}
+
+.champ {
+  margin-bottom: 1.25rem;
+}
+
+.champ label,
+.champ .etiquette {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.ligne-deux {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.champ.inline {
+  margin-bottom: 0;
+}
+
+.champ.inline input {
+  width: 100%;
+}
+
+.champ input,
+.champ textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 16px;
+  border: 1px solid #333333;
+  background: #222222;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.champ textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+.champ input::placeholder,
+.champ textarea::placeholder {
+  color: #6f6f6f;
+}
+
+.envoi {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.bouton {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: #b197fc;
+  color: #0a0a0a;
+  font-family: inherit;
+  width: 100%;
+  max-width: 420px;
+}
+
+.bouton:hover {
+  filter: brightness(1.05);
+}
+
+.cache {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+fieldset.aucun-style {
+  border: none;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .ligne-contact {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .largeur {
+    padding: 0 1.25rem;
+  }
+
+  .entete .largeur {
+    gap: 0.75rem;
+  }
+
+  .marque {
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+  }
+
+  .menu {
+    max-width: 72vw;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .menu ul {
+    gap: 0.85rem;
+  }
+
+  .menu a {
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+  }
+
+  .ligne-deux {
+    grid-template-columns: 1fr;
+  }
+}
