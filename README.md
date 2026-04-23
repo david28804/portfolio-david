@@ -22,8 +22,8 @@ Il présente mon profil, mes projets et un formulaire de contact, avec une mise 
 ---
 
 ## Lien utile
-- figma : 
-- projet en ligne : 
+- figma : https://www.figma.com/design/KCJowu2U30xJrAPfshNojC/portfolio?node-id=0-1&t=wGfhatOMyoAKnaEq-1
+- projet en ligne : https://david28804.github.io/portfolio-david/
 ---
 
 ## Auteur
